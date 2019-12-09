@@ -1,0 +1,28 @@
+.image {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.name-text {
+    color: white;
+    font-size: 175%;
+    font-family: "Courier New", Courier, monospace;
+    position: absolute;
+    /* This centers the text on the image */
+    top: 40%;
+    left: 50%;
+    /* This is to make the change the x, y from bottom left to center */
+    transform: translate(-50%, -50%);
+}
+
+.desc {
+    color: white;
+    font-size: 65%;
+    font-family: 'Courier New', Courier, monospace;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
