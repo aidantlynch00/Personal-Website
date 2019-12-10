@@ -1,28 +1,32 @@
-.image {
-    position: relative;
+body {
+    overflow: hidden;
+    background-image: url("./images/test.jpeg");
     width: 100%;
-    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.name-text {
+.page {
+    display: flex;
+    position: relative;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 5%;
+    height: 100vh;
+}
+
+h1 {
     color: white;
-    font-size: 175%;
     font-family: "Courier New", Courier, monospace;
-    position: absolute;
-    /* This centers the text on the image */
-    top: 40%;
-    left: 50%;
-    /* This is to make the change the x, y from bottom left to center */
-    transform: translate(-50%, -50%);
+    font-size: 48pt;
 }
 
-.desc {
-    color: white;
-    font-size: 65%;
+p {
+    color:white;
     font-family: 'Courier New', Courier, monospace;
-    width: 75%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    font-size: 20pt;
+    text-align: center;
 }
