@@ -4,7 +4,6 @@
 
 .nav {
     color: white;
-    width: 110%;
 }
 
 .nav ul {
@@ -12,7 +11,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: cornflowerblue;
+    background-color: #1bc47a;
 }
 
 .nav li {
@@ -21,7 +20,7 @@
 
 .nav li a {
     display: block;
-    color: white;
+    color: beige;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -30,11 +29,11 @@
 }
 
 .nav li a:hover:not(.active) {
-    background-color: royalblue;
+    background-color: #06A460;
 }
 
 .nav li .active {
-    background-color: darkslateblue;
+    background-color: #158A58;
 }
 
 
@@ -48,7 +47,7 @@ body {
 }
 
 .page {
-    background-image: url("./images/test.jpeg");
+    background-image: url("./images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -62,16 +61,53 @@ body {
     height: 100vh;
 }
 
-h1 {
+.page h1 {
     color: white;
     font-family: "Courier New", Courier, monospace;
     font-size: 48pt;
 }
 
-p {
+.page p {
     color:white;
     padding: 4%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20pt;
     text-align: center;
+}
+
+.projects-flex {
+    background-image: url("./images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    position: relative;
+    align-self: start;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 0;
+    height: 100vh;
+}
+
+.projects-flex div {
+    color: white;
+    display: block;
+    width: 30%;
+    position: relative;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+}
+
+.projects-flex div img {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+.projects-flex div p {
+    font-size: 12pt;
 }
