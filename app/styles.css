@@ -38,7 +38,14 @@
 
 
 
+/**
+  * Default styling for all pages
+  */ 
 body {
+    background-image: url("./images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
     overflow: hidden;
     width: 100%;
     height: 100vh;
@@ -47,41 +54,41 @@ body {
     color: beige;
 }
 
-.page {
-    background-image: url("./images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 
+
+/**
+  * Section for styling the main page
+  */
+.page {
     display: flex;
     position: relative;
     align-self: start;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-flow: column;
-    padding: 0;
-    height: 100vh;
+
+    font-family: "Courier New", Courier, monospace;
 }
 
 .page h1 {
-    font-family: "Courier New", Courier, monospace;
     font-size: 48pt;
 }
 
 .page p {
     padding: 4%;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 20pt;
     text-align: center;
 }
 
+
+
+/**
+  * Section for styling the projects page
+  */
 .projects-flex {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-
-    background-image: url("./images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 
     display: flex;
     position: relative;
@@ -118,4 +125,20 @@ body {
 
 .projects-flex div p {
     font-size: 12pt;
+}
+
+
+
+/**
+  * Section for styling the contact page
+  */
+
+.form-flex {
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
 }
