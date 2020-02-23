@@ -141,4 +141,30 @@ body {
     align-items: center;
     align-content: center;
     align-self: center;
+    margin: auto;
+}
+
+.form-flex input {
+    color: gray;
+    width: 15vw;
+}
+
+.form-flex #email-body {
+    color: gray;
+    width: 75vw;
+    height: 50vh;
+}
+
+.form-flex button {
+    background-color: #1bc47a;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 12px;
+
+    color: beige;
+    font-size: 12pt;
+}
+
+.form-flex button:hover {
+    background-color: #06A460;
 }

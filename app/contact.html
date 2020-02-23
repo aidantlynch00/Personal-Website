@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript" src="scripts/contact.js"></script>
         <title>Aidan Lynch</title>
     </head>
 
@@ -13,7 +15,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="https://www.github.com/aidantlynch00" target="_blank">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/aidan-lynch-935317194/" target="_blank">LinkedIn</a></li>
-                <li><a href="./files/Aidan Lynch Resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="./files/Aidan Lynch Resume.pdf" target="_blank">Résumé</a></li>
                 <li><a class="active">Contact</a></li>
             </ul>
         </div>
@@ -23,13 +25,20 @@
         <div class="form-flex">
             <form>
                 <p>
-                    Your e-mail:
-                    <input class="email-text" type="text">
+                    <label>Your name:</label>
+                    <input id="user-name" type="text" placeholder="First Last" onclick="handleFocus(this)" onblur="handleFocusLoss(this)">
                 </p>
-
                 <p>
-                    <textarea>E-mail body...</textarea>
+                    <label>Your e-mail:</label>
+                    <input id="user-email" type="email" placeholder="user@example.com" onclick="handleFocus(this)" onblur="handleFocusLoss(this)">
                 </p>
+                <p>
+                    <label>Subject:</label>
+                    <input id="subject" type="text" placeholder="Subject" onclick="handleFocus(this)" onblur="handleFocusLoss(this)">
+                </p>
+                <textarea id="email-body" rows="1" cols="1" placeholder="E-mail body..." onclick="handleFocus(this)" onblur="handleFocusLoss(this)"></textarea>
+                </br>
+                <button type="submit" onclick="send()"> Send </button>
             </form>
         </div>
     </body>
