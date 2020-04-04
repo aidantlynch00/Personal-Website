@@ -27,19 +27,22 @@
             <form>
                 <p>
                     <label>Your name:</label>
-                    <input id="user-name" type="text" placeholder="First Last" onclick="handleFocus(this)" onblur="handleFocusLoss(this)">
+                    <input id="user-name" type="text" placeholder="First Last">
                 </p>
                 <p>
                     <label>Your e-mail:</label>
-                    <input id="user-email" type="email" placeholder="user@example.com" onclick="handleFocus(this)" onblur="handleFocusLoss(this)">
+                    <input id="user-email" type="email" placeholder="user@example.com">
                 </p>
                 <p>
                     <label>Subject:</label>
-                    <input id="subject" type="text" placeholder="Subject" onclick="handleFocus(this)" onblur="handleFocusLoss(this)">
+                    <input id="subject" type="text" placeholder="Subject">
                 </p>
-                <textarea id="email-body" rows="1" cols="1" placeholder="E-mail body..." onclick="handleFocus(this)" onblur="handleFocusLoss(this)"></textarea>
-                </br>
-                <button type="submit" onclick="send()"> Send </button>
+                <p id="input-wrapper">
+                    <textarea id="email-body" rows="1" cols="1" placeholder="E-mail body..."></textarea>
+                    <label id="dummy"></label>
+                </p>
+                
+                <button id="send-button" type="button" onclick="send()"> Send </button>
             </form>
         </div>
     </body>
