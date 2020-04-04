@@ -119,8 +119,31 @@ body {
 .projects-flex div img {
     display: block;
     margin: auto;
-    width: 100px;
-    height: 100px;
+}
+
+#calendar-pic {
+    width: 180px;
+    height: 135px;
+}
+
+#website-pic {
+    width: 190px;
+    height: 110px;
+}
+
+#apt-pic {
+    width: 200px;
+    height: 33px;
+}
+
+#drone-pic {
+    width: 238px;
+    height: 158px;
+}
+
+#camera-pic {
+    width: 200px;
+    height: 150px;
 }
 
 .projects-flex div p {
