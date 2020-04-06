@@ -121,6 +121,11 @@ body {
     margin: auto;
 }
 
+.projects-flex div p {
+    font-size: 12pt;
+}
+
+/** Specific sizes for images based on starting resolution */
 #calendar-pic {
     width: 180px;
     height: 135px;
@@ -146,10 +151,6 @@ body {
     height: 150px;
 }
 
-.projects-flex div p {
-    font-size: 12pt;
-}
-
 
 
 /**
@@ -171,7 +172,10 @@ body {
 
 #x {
     display: inline-block;
-    color: #AA0B13;
+    border-radius: 5px;
+    background: #F8464F;
+    color: #FEB6B9;
+    padding-bottom: 4px;
 }
 
 .form-flex input {
@@ -208,7 +212,7 @@ body {
 header #bar {
     display: block;
     background-color: #F8464F;
-    color: white;
+    color: #FEEAEB;
     padding: 7px 8px;
     margin: 0px;
 }
