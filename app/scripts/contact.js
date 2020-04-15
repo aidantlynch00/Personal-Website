@@ -1,10 +1,6 @@
 let fieldMap = new Map();
 let markMap = new Map();
 
-function reload() {
-    window.location.replace("contact.html");
-}
-
 function formIsValid(name, email, subject, body) {
     let nameRegex = /^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$/;
     fieldMap.set("name", nameRegex.test(name));
@@ -17,15 +13,6 @@ function formIsValid(name, email, subject, body) {
 
     let valid = fieldMap.get("name") && fieldMap.get("email") && fieldMap.get("subject") && fieldMap.get("body");
     return valid;
-}
-
-function handleResult(response) {
-    if (response === "Sent") {
-        //redirect to acknowlegement page
-    }
-    else if (response === "Fail") {
-        //send error popup
-    }
 }
 
 function markFields() {
@@ -98,11 +85,19 @@ function send() {
         data.append('body', body);
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'contact.php', true);
-        xhr.onload = function () { handleResult(this.response) };
-        xhr.send(data);
+        
+        xhr.onreadystatechange = function () { 
+            if (this.readyState == 4 || this.DONE && this.status == 200) {
+                window.location.set("acknowledgement.html");
+            }
+            else {
+                alert("Something went wrong. Try again.");
+            } 
+        };
 
-        reload();
+        xhr.open('POST', 'http://aidantlynch.com/scripts/sender.php', true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.send(data);
     } else {
         markFields();
     }
