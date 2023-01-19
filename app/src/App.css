@@ -1,7 +1,68 @@
 #App {
     width: 100vw;
     height: 100vh;
+
+    font-family: 'Courier New', Courier, monospace;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
     overflow: hidden;
+}
+
+#content {
+    width: 100%;
+    height: 90%;
+
+    background: linear-gradient(-45deg, #68DCAA, #89eed5, #9df898, #68DCAA);
+    background-size: 200% 200%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 /**
@@ -23,10 +84,15 @@
 }
 
 #nav .nav-link {
-    padding: 0.30% 1.5% 0.25% 1.5%;
+    height: 100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     color: beige;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 1.5vw;
     text-align: center;
     text-decoration: none;
@@ -38,4 +104,31 @@
 
 #nav .nav-link.active {
     background-color: #158A58;
+}
+
+/**
+  * Section for styling about page
+  */
+
+#about {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    color: #424242;
+    font-weight: bold;
+}
+
+#about h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#about h3 {
+    margin: 10px 0 0 0;
+    padding: 0;
 }

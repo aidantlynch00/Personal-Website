@@ -17,7 +17,7 @@ const externalLinks = [
 const staticResources = [
     {
         title: 'Résumé',
-        path: process.env.PUBLIC_URL + '/resources/files/Aidan Lynch Resume.pdf',
+        path: process.env.PUBLIC_URL + '/resources/files/Aidan_Lynch_Resume.pdf',
         icon: null
     }
 ];

@@ -1,4 +1,4 @@
-import Home from './Home';
+import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Acknowledgement from './Acknowledgement';
@@ -8,7 +8,7 @@ const pageList = [
         routable: true,
         index: true,
         title: 'About',
-        element: <Home />
+        element: <About />
     },
     {
         routable: true,
