@@ -35,11 +35,11 @@ const Nav = () => (
         ))}
 
         {externalLinks.map(external => (
-            <a className='nav-link' href={external.link} target='_blank'>{external.title}</a>
+            <a className='nav-link' href={external.link} target='_blank' rel='noreferrer'>{external.title}</a>
         ))}
 
         {staticResources.map(resource => (
-            <a className='nav-link' href={resource.path} target='_blank'>{resource.title}</a>
+            <a className='nav-link' href={resource.path} target='_blank' rel='noreferrer'>{resource.title}</a>
         ))}
     </div>
 )
