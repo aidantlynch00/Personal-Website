@@ -160,6 +160,7 @@
 }
 
 .projects-column {
+    margin-top: 8px;
     padding-left: 8px;
     background-clip: padding-box;    
 }
@@ -168,11 +169,12 @@
     margin-bottom: 8px;
 }
 
-.project-card {
-    margin-top: 1.25%;
-    margin-bottom: 1.25%;
-    padding: 8px;
+.project-card-link {
+    color: #101010;
+    text-decoration: none;
+}
 
+.project-card {
     max-width: 25vw;
 
     background-color: white;
@@ -182,14 +184,22 @@
 
 .project-card img {
     max-width: 100%;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-.project-card a {
-    color: #101010;
-    text-decoration: none;
+.project-card-text {
+    padding: 8px;
 }
 
-.project-card h3, h5, p {
+.project-card-text h3, h5, p {
     margin: 0;
+}
+
+/**
+  * Section for styling contact page
+  */
+
+#contact {
+    
 }
