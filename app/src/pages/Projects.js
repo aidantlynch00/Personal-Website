@@ -61,7 +61,12 @@ const Projects = () => {
                 columnClassName="projects-column"
                 breakpointCols={3}
             >
-                {projects.map(project => <ProjectCard {...project} />)}
+                {projects.map(project => (
+                    <ProjectCard
+                        {...project}
+                        link={null}
+                    />
+                ))}
             </Masonry>
         </div>
     );

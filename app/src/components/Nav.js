@@ -2,11 +2,13 @@ import pageList from '../pages';
 import { NavLink } from 'react-router-dom';
 
 const externalLinks = [
+/*
     {
         title: 'Github',
         link: 'https://www.github.com/aidantlynch00',
         icon: null
     },
+*/
     {
         title: 'LinkedIn',
         link: 'https://www.linkedin.com/in/aidan-lynch-935317194/',
