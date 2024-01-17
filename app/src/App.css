@@ -12,6 +12,10 @@
     overflow: hidden;
 }
 
+.ui {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
 #content {
     width: 100%;
     height: 90%;
@@ -201,5 +205,36 @@
   */
 
 #contact {
-    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contact-form {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#contact-name {
+    margin-top: 8px;
+}
+
+#contact-email {
+    margin-top: 16px;
+}
+
+#contact-subject {
+    margin-top: 16px;
+}
+
+#contact-body {
+    margin-top: 16px;
 }
