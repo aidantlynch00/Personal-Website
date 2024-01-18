@@ -1,6 +1,17 @@
+:root {
+    --full-width: 100vw;
+    --full-height: 100vh;
+
+    --nav-height: 10vh;
+    --nav-padding: 1.5%;
+    --nav-font-size: 1.5vw;
+
+    --num-project-columns: 3;
+}
+
 #App {
-    width: 100vw;
-    height: 100vh;
+    width: var(--full-width);
+    height: var(--full-height);
 
     font-family: 'Courier New', Courier, monospace;
 
@@ -16,68 +27,66 @@
     font-family: 'Courier New', Courier, monospace !important;
 }
 
-#content {
-    width: 100%;
-    height: 90%;
-
-    background: linear-gradient(-45deg, #68DCAA, #89eed5, #9df898, #68DCAA);
-    background-size: 200% 200%;
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 15s ease infinite;
-
-    overflow-y: scroll;
-}
-
+/**
+ * Define the gradient background
+ */
 @-webkit-keyframes Gradient {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
+    0%   { background-position: 0% 50%;   }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%;   }
 }
 
 @-moz-keyframes Gradient {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
+    0%   { background-position: 0% 50%;   }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%;   }
 }
 
 @keyframes Gradient {
-    0% {
-        background-position: 0% 50%
-    }
+    0%   { background-position: 0% 50%;   }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%;   }
+}
 
-    50% {
-        background-position: 100% 50%
-    }
+/**
+ * Define media queries to alter variables
+ */
+@media screen and (max-aspect-ratio: 3/4) {
+    :root {
+        --nav-height: 10vh;
+        --nav-padding: 3%;
+        --nav-font-size: 4vw;
 
-    100% {
-        background-position: 0% 50%
+        --num-project-columns: 1;
+    }
+}
+
+@media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4) {
+    :root {
+        --nav-height: 10vh;
+        --nav-padding: 5%;
+        --nav-font-size: 3.25vw;
+
+        --num-project-columns: 2;
+    }
+}
+
+@media screen and (min-aspect-ratio: 5/4) {
+    :root {
+        --nav-height: 10vh;
+        --nav-padding: 2%;
+        --nav-font-size: 1.75vw;
+
+        --num-project-columns: 3;
     }
 }
 
 /**
-  * Section for the nav bar styling
-  */
-
+ * Section for the nav bar styling
+ */
 #nav {
-    width: 100%;
-    height: 10%;
+    width: var(--full-width);
+    height: var(--nav-height);
     margin: 0;
     padding: 0;
     background-color: #1bc47a;
@@ -91,15 +100,15 @@
 
 #nav .nav-link {
     height: 100%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    padding-left: var(--nav-padding);
+    padding-right: var(--nav-padding);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     color: beige;
-    font-size: 1.5vw;
+    font-size: var(--nav-font-size);
     text-align: center;
     text-decoration: none;
 }
@@ -112,10 +121,22 @@
     background-color: #158A58;
 }
 
-/**
-  * Section for styling about page
-  */
+#content {
+    width: 100%;
+    height: calc(var(--full-height) - var(--nav-height));
 
+    background: linear-gradient(-45deg, #68DCAA, #89eed5, #9df898, #68DCAA);
+    background-size: 200% 200%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+
+    overflow-y: scroll;
+}
+
+/**
+ * Section for styling about page
+ */
 #about {
     width: 100%;
     height: 100%;
@@ -132,17 +153,18 @@
 #about h1 {
     margin: 0;
     padding: 0;
+    font-size: calc(3vw + 3vh + 1vmin);
 }
 
 #about h3 {
     margin: 8px 0 20vh 0;
     padding: 0;
+    font-size: calc(1vw + 1vh + 0.5vmin);
 }
 
 /**
-  * Section for styling projects page
-  */
-
+ * Section for styling projects page
+ */
 #projects {
     width: 100%;
     height: 100%;
@@ -179,7 +201,7 @@
 }
 
 .project-card {
-    max-width: 25vw;
+    max-width: calc(85vw / var(--num-project-columns));
 
     background-color: white;
     border: 1px solid #101010;
@@ -201,9 +223,8 @@
 }
 
 /**
-  * Section for styling contact page
-  */
-
+ * Section for styling contact page
+ */
 #contact {
     width: 100%;
     height: 100%;
