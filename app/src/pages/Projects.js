@@ -1,5 +1,6 @@
 import ProjectCard from '../components/ProjectCard';
 import Masonry from 'react-masonry-css';
+import { useState, useEffect } from 'react';
 
 const projects = [
     {
@@ -81,13 +82,42 @@ const projects = [
     }
 ]
 
+const screenToColumns = {
+    
+}
+
 const Projects = () => {
+    // get the number of columns from CSS
+    const [numColumns, setNumColumns] = useState(0);
+
+    // create a handler for window resize events
+    const handleResizeEvent = () => {
+        const root = document.documentElement;
+        const newNumColumns = getComputedStyle(root).getPropertyValue('--num-project-columns');
+        
+
+        if (newNumColumns != numColumns) {
+            setNumColumns(newNumColumns);
+        }
+    };
+
+    // register handler on component mount
+    useEffect(() => {
+        window.addEventListener('resize', handleResizeEvent);
+
+        // run handler to initially set number of columns
+        handleResizeEvent();
+
+        // remove the handler on component unmount
+        return () => window.removeEventListener('resize', handleResizeEvent);
+    }, []);
+
     return (
         <div id="projects">
             <Masonry
                 className="projects-masonry"
                 columnClassName="projects-column"
-                breakpointCols={3}
+                breakpointCols={numColumns}
             >
                 {projects.map(project => <ProjectCard {...project} />)}
             </Masonry>
