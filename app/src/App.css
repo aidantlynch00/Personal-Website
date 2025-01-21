@@ -54,8 +54,8 @@
 @media screen and (max-aspect-ratio: 3/4) {
     :root {
         --nav-height: 10vh;
-        --nav-padding: 3%;
-        --nav-font-size: 4vw;
+        --nav-padding: 2%;
+        --nav-font-size: 3.75vw;
 
         --num-project-columns: 1;
     }
@@ -64,7 +64,7 @@
 @media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 5/4) {
     :root {
         --nav-height: 10vh;
-        --nav-padding: 5%;
+        --nav-padding: 3%;
         --nav-font-size: 3.25vw;
 
         --num-project-columns: 2;

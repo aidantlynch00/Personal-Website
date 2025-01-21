@@ -75,10 +75,6 @@ const projects = [
     }
 ]
 
-const screenToColumns = {
-    
-}
-
 const Projects = () => {
     // get the number of columns from CSS
     const [numColumns, setNumColumns] = useState(0);
