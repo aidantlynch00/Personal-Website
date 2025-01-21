@@ -16,6 +16,7 @@ const pageList = [
         title: 'Projects',
         element: <Projects />
     },
+    /*
     {
         routable: true,
         path: 'contact',
@@ -28,6 +29,7 @@ const pageList = [
         title: 'Acknowledgement',
         element: <Acknowledgement />
     }
+    */
 ];
 
 export default pageList;
