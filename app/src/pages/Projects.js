@@ -4,6 +4,20 @@ import { useState, useEffect } from 'react';
 
 const projects = [
     {
+        title: "zestty",
+        time_range: "December 2025 - February 2026",
+        link: "https://github.com/aidantlynch00/zestty",
+        image_src: process.env.PUBLIC_URL + "/resources/images/zestty.gif",
+        description: "A POSIX-compliant shell script and accompanying zellij plugin for quickly moving between project sessions."
+    },
+    {
+        title: "zj-handful",
+        time_range: "January 2025",
+        link: "https://github.com/aidantlynch00/zj-handful",
+        image_src: process.env.PUBLIC_URL + "/resources/images/zj-handful.gif",
+        description: "A zellij plugin for picking and managing groups of panes."
+    },
+    {
         title: "Automata",
         time_range: "January 2025",
         link: "https://github.com/aidantlynch00/automata",
@@ -20,7 +34,7 @@ const projects = [
     {
         title: "AutoPot",
         time_range: "June 2023 - Present",
-        link: "https://github.com/aidantlynch00/autopot",
+        link: null, // "https://github.com/aidantlynch00/autopot",
         image_src: process.env.PUBLIC_URL + "/resources/images/autopot.jpg",
         description: "An embedded, distributed system that collects moisture and photovoltaic sensor data with the goal of automatically caring for plants. Architected to be a continuous monitoring device, not unlike a medical monitor."
     },
@@ -38,13 +52,13 @@ const projects = [
         image_src: null,
         description: "A program for running a monte carlo simulation on the S&P 500. Different contribution and distribution strategies are used to customize the simulation based on the user's current investment situation."
     },
-    {
-        title: "Combine-imals",
-        time_range: "November 2023",
-        link: "https://github.com/aidantlynch00/combine-imals",
-        image_src: process.env.PUBLIC_URL + "/resources/images/combine-imals.png",
-        description: "A clone of the popular Nintendo Switch game, Suika game. It's still in progress, but combinable objects can be spawned into the container."
-    },
+    // {
+    //     title: "Combine-imals",
+    //     time_range: "November 2023",
+    //     link: "https://github.com/aidantlynch00/combine-imals",
+    //     image_src: process.env.PUBLIC_URL + "/resources/images/combine-imals.png",
+    //     description: "A clone of the popular Nintendo Switch game, Suika game. It's still in progress, but combinable objects can be spawned into the container."
+    // },
     {
         title: "Simplex",
         time_range: "October 2022",
@@ -55,14 +69,14 @@ const projects = [
     {
         title: "Amazon Price Tracker",
         time_range: "September 2019",
-        link: "https://github.com/aidantlynch00/Amazon-Price-Tracker",
+        link: null, // "https://github.com/aidantlynch00/Amazon-Price-Tracker",
         image_src: process.env.PUBLIC_URL + "/resources/images/apt.png",
         description: "Graphical application that graphs the prices of Amazon products over time. Data is pulled from Amazon product listings and stored in a MySQL database."
     },
     {
         title: "Drone",
         time_range: "August 2018 - May 2019",
-        link: "https://github.com/aidantlynch00/drone-code",
+        link: null, // "https://github.com/aidantlynch00/drone-code",
         image_src: process.env.PUBLIC_URL + "/resources/images/drone.jpg",
         description: "Built a drone and the firmware needed for flight."
     },
