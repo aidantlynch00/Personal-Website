@@ -14,14 +14,6 @@ const externalLinks = [
     }
 ];
 
-const staticResources = [
-    {
-        title: 'Résumé',
-        path: process.env.PUBLIC_URL + '/resources/files/Aidan_Lynch_Resume.pdf',
-        icon: null
-    }
-];
-
 const Nav = () => (
     <div id='nav'>
         {pageList.filter(page => page.routable).map(page => (
@@ -36,10 +28,6 @@ const Nav = () => (
 
         {externalLinks.map(external => (
             <a className='nav-link' href={external.link} target='_blank' rel='noreferrer'>{external.title}</a>
-        ))}
-
-        {staticResources.map(resource => (
-            <a className='nav-link' href={resource.path} target='_blank' rel='noreferrer'>{resource.title}</a>
         ))}
     </div>
 )
