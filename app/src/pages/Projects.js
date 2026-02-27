@@ -52,13 +52,6 @@ const projects = [
         image_src: null,
         description: "A program for running a monte carlo simulation on the S&P 500. Different contribution and distribution strategies are used to customize the simulation based on the user's current investment situation."
     },
-    // {
-    //     title: "Combine-imals",
-    //     time_range: "November 2023",
-    //     link: "https://github.com/aidantlynch00/combine-imals",
-    //     image_src: process.env.PUBLIC_URL + "/resources/images/combine-imals.png",
-    //     description: "A clone of the popular Nintendo Switch game, Suika game. It's still in progress, but combinable objects can be spawned into the container."
-    // },
     {
         title: "Simplex",
         time_range: "October 2022",
@@ -67,18 +60,11 @@ const projects = [
         description: "Command line tool for finding optimal mixed strategies for 2 player, zero-sum games by performing the simplex method."
     },
     {
-        title: "Amazon Price Tracker",
-        time_range: "September 2019",
-        link: null, // "https://github.com/aidantlynch00/Amazon-Price-Tracker",
-        image_src: process.env.PUBLIC_URL + "/resources/images/apt.png",
-        description: "Graphical application that graphs the prices of Amazon products over time. Data is pulled from Amazon product listings and stored in a MySQL database."
-    },
-    {
         title: "Drone",
         time_range: "August 2018 - May 2019",
         link: null, // "https://github.com/aidantlynch00/drone-code",
         image_src: process.env.PUBLIC_URL + "/resources/images/drone.jpg",
-        description: "Built a drone and the firmware needed for flight."
+        description: "Built a drone and the firmware needed for radio communication and flight control."
     },
     {
         title: "Calendar",
