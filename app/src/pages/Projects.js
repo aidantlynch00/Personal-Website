@@ -22,7 +22,7 @@ const projects = [
         time_range: "January 2025",
         link: "https://github.com/aidantlynch00/automata",
         image_src: process.env.PUBLIC_URL + "/resources/images/automata.gif",
-        description: "A generic cellular automata engine. Currently supports Conway's Game of Life and a cyclic cellular automata."
+        description: "A generic cellular automata engine. Currently supports Conway's Game of Life, cyclic cellular automata, and Brian's Brain."
     },
     {
         title: "Dev-Env",
